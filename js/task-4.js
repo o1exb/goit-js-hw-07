@@ -1,4 +1,6 @@
-document.querySelector('.login-form').addEventListener("submit", function (event) {
+document
+  .querySelector('.login-form')
+  .addEventListener('submit', function (event) {
     event.preventDefault();
 
     let form = event.target;
@@ -6,15 +8,15 @@ document.querySelector('.login-form').addEventListener("submit", function (event
     let password = form.elements.password.value.trim();
 
     if (!email || !password) {
-        alert("All form fields must be filled in");
-        return;
+      alert('All form fields must be filled in');
+      return;
     }
 
     let formData = {
-        email: email;
-        password: password
+      email: email,
+      password: password,
     };
 
     console.log(formData);
     form.reset();
-});
+  });
